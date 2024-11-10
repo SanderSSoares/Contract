@@ -21,4 +21,5 @@ contract Restaurant {
 
     event MenuItemAdded (uint ItemId, string Name, uint price);
     event OrderPlaces(address customer, uint itemId, uint quantity, uint totalCost);
+    event PaymentReceived(address customer, uint amount);
 }

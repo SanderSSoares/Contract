@@ -62,6 +62,25 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "PaymentReceived",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -153,11 +172,11 @@
 	},
 	"sources": {
 		"contracts/RestaurantContract.sol": {
-			"keccak256": "0xfec5b8f73235864de50aad524da6f4829d33763b37bc1784e74ecce2bcf05b58",
+			"keccak256": "0x1e5c9d36a062a5ff8659f34dc8594c79657a843fa1363c86472d9eb16ad50632",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b3f033d801e2031fb211edfc6d3a2372861197ec4114e927eaaa5b3f32fb2d35",
-				"dweb:/ipfs/QmW7dNdTt1Vd17QpiyYHtH7KrLsCzKRVNayUBLeQoxrSRc"
+				"bzz-raw://e1b58ccdbd250c9371b98925b2e225739ac1d7d9bff4d86212b6f390e35ab578",
+				"dweb:/ipfs/Qmbcf2hwC29dNxGwa9M3d6sm5RsytLV94c4vaoUc3upmAm"
 			]
 		}
 	},
