@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ownerBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/RestaurantContract.sol": "Restaurant"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/RestaurantContract.sol": {
+			"keccak256": "0xbff43115b334f92df8a19fd4f97394e32dfdd85f67bcb8c16787b6923ddf5635",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cbaf2da47b599f8f59e4977744e5b1bed8a63f79abb7e8ce368aca1a47a3328f",
+				"dweb:/ipfs/QmQwf41KbbJqUow9PjY6vqiVr3ugM7G34pwiqUrFK16P2u"
+			]
+		}
+	},
+	"version": 1
+}
