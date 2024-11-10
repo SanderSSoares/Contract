@@ -26,6 +26,16 @@ contract Restaurant {
     //Function that only the Owner can do, not customer
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can perform this function");
-        _;
+        _; //_ control the access on Solidity
     }
+
+    constructor(){
+        owner = msg.sender;
+
+    }
+
+    function addMenuItem(String memory _name, uint _price) public onlyOwner
+        menu[menuItemCount] = MenuItem(_name, _price);
+        emit MenuItemAdded(menuItemCount, _name, _price);
+        menuItemCount++;
 }
