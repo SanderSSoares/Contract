@@ -42,7 +42,18 @@ contract Restaurant {
 
     Function placeOrder(uint _itemId, uint _quantity) public payable {
         require(_itemId < menuItemCount, "Invalid menu item");
+        menuItem memory item = menu[_itemId];
         uint totalCost = item.price * _quantity;
-        require(msg.value == totalCost, "Incorrect payment amount")
+        require(msg.value == totalCost, "Incorrect payment amount");
+        ownerBalance += msg.value;
+        emit OrderPlaced(msg.sender, _itemId, _quantity, totalCost);
+        emit PaymentReceived(msg.sender, msg.value);
+
+    }
+
+    function withdrawBalance() public onlyOwner{
+        uint amount = ownerBalance;
+        ownerBalance = 0;
+        payable(owner).transfer(amount);
     }
 }
