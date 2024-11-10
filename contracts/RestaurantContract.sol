@@ -22,4 +22,10 @@ contract Restaurant {
     event MenuItemAdded (uint ItemId, string Name, uint price);
     event OrderPlaces(address customer, uint itemId, uint quantity, uint totalCost);
     event PaymentReceived(address customer, uint amount);
+
+    //Function that only the Owner can do, not customer
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only the owner can perform this function");
+        _;
+    }
 }
