@@ -34,8 +34,15 @@ contract Restaurant {
 
     }
 
-    function addMenuItem(String memory _name, uint _price) public onlyOwner
+    function addMenuItem(String memory _name, uint _price) public onlyOwner {
         menu[menuItemCount] = MenuItem(_name, _price);
         emit MenuItemAdded(menuItemCount, _name, _price);
         menuItemCount++;
+    }
+
+    Function placeOrder(uint _itemId, uint _quantity) public payable {
+        require(_itemId < menuItemCount, "Invalid menu item");
+        uint totalCost = item.price * _quantity;
+        require(msg.value == totalCost, "Incorrect payment amount")
+    }
 }
