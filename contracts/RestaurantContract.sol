@@ -56,4 +56,10 @@ contract Restaurant {
         ownerBalance = 0;
         payable(owner).transfer(amount);
     }
+
+    function getMenuItem(uint _itemId) public view returns (string memory name, uint price){
+        require(_itemId < menuItemCount, "Invalid menu Item.");
+        MenuItem memory item = menu[_itemId];
+        return (item.name, item.price);
+    }
 }
